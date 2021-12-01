@@ -152,7 +152,7 @@ def login():
   
     if (user['username'] == auth['username']) and (user['password'] == auth['password']):
         # generates the JWT Token
-        token = jwt.encode({"jwt_username": user['username'] , 'jwt_exp' : str(datetime.now() + timedelta(hours= 12))}, app.config['SECRET_KEY'], algorithm="HS256")
+        token = jwt.encode({"jwt_username": user['username'] , 'jwt_exp' : str(datetime.now() + timedelta(minutes= 1))}, app.config['SECRET_KEY'], algorithm="HS256")
         
         # refreshToken = jwt.encode({
         #     'expR' : datetime.utcnow() + timedelta(minutes = 30)
