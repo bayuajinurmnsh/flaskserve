@@ -7,7 +7,7 @@ from datetime import datetime, date, time, timedelta
 import jwt
 ############################ Choose Models ############################
 # from dbms.json_db.model import Model
-from model import Model
+from dbms.json_db.model import Model
 import uuid
 
 ############################ Initialization ############################
@@ -152,7 +152,7 @@ def login():
   
     if (user['username'] == auth['username']) and (user['password'] == auth['password']):
         # generates the JWT Token
-        token = jwt.encode({"jwt_username": user['username'] , 'jwt_exp' : str(datetime.now() + timedelta(minutes= 1))}, app.config['SECRET_KEY'], algorithm="HS256")
+        token = jwt.encode({"jwt_username": user['username'] , 'jwt_exp' : str(datetime.now() + timedelta(hours= 12))}, app.config['SECRET_KEY'], algorithm="HS256")
         
         # refreshToken = jwt.encode({
         #     'expR' : datetime.utcnow() + timedelta(minutes = 30)
@@ -187,6 +187,7 @@ def register():
 ############################## create name #############################
 @app.route('/keys', methods=["POST"])
 def create_name():
+    # check_token = token_required()
     check_token = token_required()
     if check_token == "valid":
         valid_key = ('key', 'firstName', 'lastName' , 'createdDate','balance' ,'status', 'accountType', 'validDate','accountNumber','securityCode')
@@ -231,7 +232,7 @@ def create_name():
         # succeed
         return jsonify({'data' : data_dict, "status":"ok"}), 201
 
-    return jsonify({"message": "You dont have authorization", "status": "error"}), 400
+    return jsonify({"message": "token expired", "status": "error"}), 403
 
 ############################## read name ###############################
 @app.route('/keys/<key>', methods=["GET"])
@@ -347,7 +348,7 @@ def print_database():
     #     return jsonify({'data' : database, "status":"ok"}), 200
 
 
-# ############################ Main Function #############################
-# if __name__ == "__main__":
-#     # run backend server on http://localhost:5000/
-#     app.run(host='localhost', port=5000, debug=True)
+############################ Main Function #############################
+if __name__ == "__main__":
+    # run backend server on http://localhost:5000/
+    app.run(host='localhost', port=5000, debug=True)

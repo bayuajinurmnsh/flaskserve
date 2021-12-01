@@ -35,18 +35,6 @@
       "securityCode": 1234,
       "status": "active",
       "validDate": "11/26"
-    },
-    "f539610d-51f9-11ec-8db2-8c8caa4d3e18": {
-      "accountType": "premium",
-      "balance": 500000,
-      "firstName": "satuLipa",
-      "lastName": "yu",
-      "status": "active",
-      "accountNumber": 111555,
-      "securityCode": 1234,
-      "key": "f539610d-51f9-11ec-8db2-8c8caa4d3e18",
-      "createdDate": "30/11/2021",
-      "validDate": "11/26"
     }
   },
   "tbl_login": {
@@ -57,6 +45,18 @@
     "cit": {
       "username": "cit",
       "password": "cit"
+    },
+    "ubay": {
+      "username": "ubay",
+      "password": "ubay"
+    },
+    "masbro": {
+      "username": "masbro",
+      "password": "masbro"
+    },
+    "kita": {
+      "username": "kita",
+      "password": "kita"
     }
   }
 }
