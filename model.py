@@ -8,9 +8,17 @@ from os import path
 
 class Model():
     database = {}
+    location = ""
 
-    def __init__(self, database={}):
+    def __init__(self, database={}, location="database.json"):
+        self.location = path.dirname(__file__) + "/" + location
         self.database = database
+        # the only case which need to read file
+        if (path.isfile(self.location) and len(database) == 0):
+            with open(self.location, "r") as data_file:
+                self.database = json.load(data_file)
+        # then write to the disk
+        self.save()
 
     ############################ create item ###########################
 
