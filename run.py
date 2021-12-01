@@ -7,7 +7,7 @@ from datetime import datetime, date, time, timedelta
 import jwt
 ############################ Choose Models ############################
 # from dbms.json_db.model import Model
-from dbms.json_db.model import Model
+from model import Model
 import uuid
 
 ############################ Initialization ############################
