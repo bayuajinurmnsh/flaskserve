@@ -1,0 +1,62 @@
+{
+  "tbl_users": {
+    "1": {
+      "accountNumber": 111222,
+      "accountType": "basic",
+      "balance": 50000000,
+      "createdDate": "29/12/2021",
+      "firstName": "John",
+      "key": "1",
+      "lastName": "Doe",
+      "securityCode": 1234,
+      "status": "active",
+      "validDate": "12/26"
+    },
+    "2": {
+      "accountNumber": 111333,
+      "accountType": "platinum",
+      "balance": 150000.0,
+      "createdDate": "29/11/2021",
+      "firstName": "Strong",
+      "key": "2",
+      "lastName": "Dinosaur",
+      "securityCode": 1234,
+      "status": "active",
+      "validDate": "11/26"
+    },
+    "3": {
+      "accountNumber": 111444,
+      "accountType": "basic",
+      "balance": 200000.0,
+      "createdDate": "29/11/2021",
+      "firstName": "Black",
+      "key": "3",
+      "lastName": "Cat",
+      "securityCode": 1234,
+      "status": "active",
+      "validDate": "11/26"
+    },
+    "f539610d-51f9-11ec-8db2-8c8caa4d3e18": {
+      "accountType": "premium",
+      "balance": 500000,
+      "firstName": "satuLipa",
+      "lastName": "yu",
+      "status": "active",
+      "accountNumber": 111555,
+      "securityCode": 1234,
+      "key": "f539610d-51f9-11ec-8db2-8c8caa4d3e18",
+      "createdDate": "30/11/2021",
+      "validDate": "11/26"
+    }
+  },
+  "tbl_login": {
+    "bayuaji": {
+      "username": "bayuaji",
+      "password": "bayuaji"
+    },
+    "cit": {
+      "username": "cit",
+      "password": "cit"
+    }
+  }
+}
