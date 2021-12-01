@@ -347,7 +347,7 @@ def print_database():
     #     return jsonify({'data' : database, "status":"ok"}), 200
 
 
-############################ Main Function #############################
-if __name__ == "__main__":
-    # run backend server on http://localhost:5000/
-    app.run(host='localhost', port=5000, debug=True)
+# ############################ Main Function #############################
+# if __name__ == "__main__":
+#     # run backend server on http://localhost:5000/
+#     app.run(host='localhost', port=5000, debug=True)
